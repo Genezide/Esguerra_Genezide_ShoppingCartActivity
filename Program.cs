@@ -28,6 +28,10 @@ class Program
 {
     static void Main()
     {
+        Product[] products = new Product[3];
+        CartItem[] cart = new CartItem[10];
+        int cartCount = 0;
+
         Console.WriteLine("Shopping Cart System");
     }
 }
