@@ -29,5 +29,15 @@ class Program
         {
             p.DisplayProduct();
         }
+
+        Console.Write("Enter product number: ");
+        string input = Console.ReadLine();
+
+        int productNumber;
+
+        if (!int.TryParse(input, out productNumber))
+        {
+            Console.WriteLine("Invalid input.");
+        }
     }
 }
