@@ -23,21 +23,26 @@ class Program
         products[1] = new Product { Id = 2, Name = "Mouse", Price = 500, RemainingStock = 10 };
         products[2] = new Product { Id = 3, Name = "Keyboard", Price = 1200, RemainingStock = 7 };
 
-        Console.WriteLine("STORE MENU");
-
-        foreach (Product p in products)
-        {
-            p.DisplayProduct();
-        }
-
         Console.Write("Enter product number: ");
-        string input = Console.ReadLine();
+        string productInput = Console.ReadLine();
 
         int productNumber;
 
-        if (!int.TryParse(input, out productNumber))
+        if (!int.TryParse(productInput, out productNumber))
         {
-            Console.WriteLine("Invalid input.");
+            Console.WriteLine("Invalid product number.");
+            return;
+        }
+
+        Console.Write("Enter quantity: ");
+        string quantityInput = Console.ReadLine();
+
+        int quantity;
+
+        if (!int.TryParse(quantityInput, out quantity))
+        {
+            Console.WriteLine("Invalid quantity.");
+            return;
         }
     }
 }
