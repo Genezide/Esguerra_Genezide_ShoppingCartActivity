@@ -11,6 +11,11 @@ class Product
     {
         Console.WriteLine($"{Id}. {Name} - Price: {Price} - Stock: {RemainingStock}");
     }
+
+    public bool HasEnoughStock(int quantity)
+    {
+        return quantity <= RemainingStock;
+    }
 }
 
 class Program
@@ -23,26 +28,11 @@ class Program
         products[1] = new Product { Id = 2, Name = "Mouse", Price = 500, RemainingStock = 10 };
         products[2] = new Product { Id = 3, Name = "Keyboard", Price = 1200, RemainingStock = 7 };
 
-        Console.Write("Enter product number: ");
-        string productInput = Console.ReadLine();
+        Console.WriteLine("STORE MENU");
 
-        int productNumber;
-
-        if (!int.TryParse(productInput, out productNumber))
+        foreach (Product p in products)
         {
-            Console.WriteLine("Invalid product number.");
-            return;
-        }
-
-        Console.Write("Enter quantity: ");
-        string quantityInput = Console.ReadLine();
-
-        int quantity;
-
-        if (!int.TryParse(quantityInput, out quantity))
-        {
-            Console.WriteLine("Invalid quantity.");
-            return;
+            p.DisplayProduct();
         }
     }
 }
