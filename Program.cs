@@ -28,10 +28,20 @@ class Program
 {
     static void Main()
     {
-        Product[] products = new Product[3];
         CartItem[] cart = new CartItem[10];
         int cartCount = 0;
 
-        Console.WriteLine("Shopping Cart System");
+        Console.WriteLine("RECEIPT");
+
+        double grandTotal = 0;
+
+        for (int i = 0; i < cartCount; i++)
+        {
+            double subtotal = cart[i].Product.Price * cart[i].Quantity;
+            Console.WriteLine($"{cart[i].Product.Name} x {cart[i].Quantity} = {subtotal}");
+            grandTotal += subtotal;
+        }
+
+        Console.WriteLine($"Grand Total: {grandTotal}");
     }
 }
