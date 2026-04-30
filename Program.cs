@@ -104,6 +104,15 @@ class Program
 
                 receiptNumber++;
 
+                Console.WriteLine("\nLOW STOCK ALERT:");
+                foreach (Product p in products)
+                {
+                    if (p.RemainingStock <= 5)
+                    {
+                        Console.WriteLine($"{p.Name} has only {p.RemainingStock} left.");
+                    }
+                }
+
                 running = false;
             }
         }
