@@ -2,7 +2,7 @@
 
 # Project Description
  
-This is a Shopping Cart System made using C#. It runs on the console and uses classes and arrays to store product details. The system shows how items are selected, checked, and processed. It also includes a flowchart that explains the full process and steps clearly.
+This is a Console-based Shopping Cart System built in C#. It uses classes and arrays to manage product data, allowing users to select items, navigate through a cart menu, and process orders. The system includes checkout features, payment validation, change calculation, and generates receipts with date and time stamps. A flowchart is also included to clearly illustrate the program's workflow.
  
 # Features
  
@@ -28,6 +28,10 @@ Which parts of the project you used AI for:
 - Checking and fixing errors in the code
 - Improving the logic and flow of the program
 - Formatting and arranging the layout of the flowchart
+- Implementing the checkout flow and cart menu navigation
+- Integrating payment validation and change calculation
+- Adding date and time features for receipt tracking
+- Enhancing user interaction and input handling
  
 Why you used AI in those parts:
  
