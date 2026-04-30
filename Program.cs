@@ -49,7 +49,7 @@ class Program
 
         string continueShopping = "Y";
 
-        while (continueShopping.ToUpper() == "Y")
+        while (continueShopping == "Y")
         {
             Console.WriteLine("\nSTORE MENU");
 
@@ -133,8 +133,18 @@ class Program
 
             Console.WriteLine("Item added to cart.");
 
-            Console.Write("Add another item? (Y/N): ");
-            continueShopping = Console.ReadLine();
+            while (true)
+            {
+                Console.Write("Add another item? (Y/N): ");
+                continueShopping = Console.ReadLine().ToUpper();
+
+                if (continueShopping == "Y" || continueShopping == "N")
+                {
+                    break;
+                }
+
+                Console.WriteLine("Invalid input. Please enter Y or N only.");
+            }
         }
 
         Console.WriteLine("\n===== RECEIPT =====");
