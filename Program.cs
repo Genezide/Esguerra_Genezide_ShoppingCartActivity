@@ -20,13 +20,15 @@ class Program
     {
         Product[] products =
         {
-            new Product { Id = 1, Name = "Laptop", Price = 30000, RemainingStock = 5 },
-            new Product { Id = 2, Name = "Mouse", Price = 500, RemainingStock = 10 },
-            new Product { Id = 3, Name = "Keyboard", Price = 1200, RemainingStock = 7 }
+            new Product { Id = 1, Name = "Portable SSD 1TB", Price = 6000, RemainingStock = 7 },
+            new Product { Id = 2, Name = "Bluetooth Speaker", Price = 2500, RemainingStock = 9 },
+            new Product { Id = 3, Name = "Smartwatch", Price = 7000, RemainingStock = 6 }
         };
 
         CartItem[] cart = new CartItem[10];
         int cartCount = 0;
+
+        int receiptNumber = 1;
 
         bool running = true;
 
@@ -38,6 +40,7 @@ class Program
             if (choice == 1)
             {
                 foreach (Product p in products) p.DisplayProduct();
+
                 int pNum = int.Parse(Console.ReadLine());
                 int qty = int.Parse(Console.ReadLine());
 
@@ -83,7 +86,23 @@ class Program
                 }
 
                 double change = payment - finalTotal;
+
+                Console.WriteLine("\n===== RECEIPT =====");
+                Console.WriteLine($"Receipt No: {receiptNumber:D4}");
+                Console.WriteLine($"Date: {DateTime.Now}");
+
+                for (int i = 0; i < cartCount; i++)
+                {
+                    Console.WriteLine($"{cart[i].Product.Name} x {cart[i].Quantity} = {cart[i].GetSubtotal()}");
+                }
+
+                Console.WriteLine($"Grand Total: {total}");
+                Console.WriteLine($"Discount: {discount}");
+                Console.WriteLine($"Final Total: {finalTotal}");
+                Console.WriteLine($"Payment: {payment}");
                 Console.WriteLine($"Change: {change}");
+
+                receiptNumber++;
 
                 running = false;
             }
