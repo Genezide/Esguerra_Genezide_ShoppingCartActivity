@@ -12,7 +12,14 @@ This is a Shopping Cart System made using C#. It runs on the console and uses cl
 - Generate Receipt
 - Apply Discounts
 - Update Stock
+- Cart Menu Navigation
+- Payment Handling with Change Calculation
+- Low Stock Alert System
+- Date and Time in Receipt
  
+<img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/f6458042-ca16-4aa3-8719-1fffb266d3f1" />
+
+
 # AI Usage in This Project
  
 Which parts of the project you used AI for:
@@ -28,6 +35,10 @@ Why you used AI in those parts:
 - To find mistakes I might have missed
 - To make sure the program works correctly
 - To make the flowchart look organized and easy to read
+- Assisted in implementing checkout flow with cart menu navigation
+- Helped integrate payment validation and change calculation
+- Suggested adding date and time for receipt tracking
+- Improved user interaction flow to match console-based menu systems
  
 What prompts/questions you asked:
  
@@ -35,6 +46,11 @@ What prompts/questions you asked:
 - "How do I fix this error in my code?"
 - "How can I make the logic work better?"
 - "Help me format the flowchart properly"
+- "How do I implement a cart menu in C#?"
+- "How do I handle checkout and payment validation?"
+- "How do I calculate change after payment?"
+- "How do I display date and time in C#?"
+- "How do I create a receipt output in console?"
  
 What you changed or improved after using AI:
  
@@ -42,3 +58,9 @@ What you changed or improved after using AI:
 - Fixed errors and bugs in the code
 - Made the program logic smoother
 - Organized the flowchart structure and layout
+- Added a cart menu system for better navigation
+- Implemented checkout process with payment validation
+- Improved receipt output to include detailed information
+- Added date and time tracking for each transaction
+- Enhanced user input handling to prevent errors
+- Improved overall program flow to match a real shopping system
