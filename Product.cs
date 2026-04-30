@@ -9,7 +9,7 @@ public class Product
 
     public void DisplayProduct()
     {
-        Console.WriteLine($"{Id}. {Name} - Price: {Price} - Stock: {RemainingStock}");
+        Console.WriteLine($"{Id}. {Name} - {Price} (Stock: {RemainingStock})");
     }
 
     public bool HasEnoughStock(int quantity)
