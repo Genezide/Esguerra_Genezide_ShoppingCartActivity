@@ -30,7 +30,7 @@ class CartItem
 
     public double GetSubtotal()
     {
-        return Product.Price * Quantity;
+       return Product.Price * Quantity;
     }
 }
 
